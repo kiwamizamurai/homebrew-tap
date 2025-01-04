@@ -7,20 +7,20 @@ class Ghif < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kiwamizamurai/ghif/releases/download/v#{version}/ghif-x86_64-apple-darwin"
-      sha256 "INTEL_SHA256"
+      sha256 :no_check
     else
       url "https://github.com/kiwamizamurai/ghif/releases/download/v#{version}/ghif-aarch64-apple-darwin"
-      sha256 "ARM_SHA256"
+      sha256 :no_check
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/kiwamizamurai/ghif/releases/download/v#{version}/ghif-x86_64-unknown-linux-gnu"
-      sha256 "LINUX_INTEL_SHA256"
+      sha256 :no_check
     else
       url "https://github.com/kiwamizamurai/ghif/releases/download/v#{version}/ghif-aarch64-unknown-linux-gnu"
-      sha256 "LINUX_ARM_SHA256"
+      sha256 :no_check
     end
   end
 
