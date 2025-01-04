@@ -24,11 +24,6 @@ class Ghif < Formula
     end
   end
 
-  on_windows do
-    url "https://github.com/kiwamizamurai/ghif/releases/download/v#{version}/ghif-x86_64-pc-windows-msvc.exe"
-    sha256 "WINDOWS_SHA256"
-  end
-
   def install
     if OS.mac? || OS.linux?
       chmod 0755, Dir["ghif-*"]
@@ -46,8 +41,6 @@ class Ghif < Formula
       else
         bin.install "ghif-aarch64-unknown-linux-gnu" => "ghif"
       end
-    else
-      bin.install "ghif-x86_64-pc-windows-msvc.exe" => "ghif"
     end
   end
 
