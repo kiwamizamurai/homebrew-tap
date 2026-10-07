@@ -1,6 +1,6 @@
 cask "washi" do
-  version "0.1.0"
-  sha256 "1b473e75ac624982bd56eb1355b2f5a69cf1cd8201e0840da25b73d3c10cd100"
+  version "1.0.0"
+  sha256 "d9c6fcbff6468acb4cc4f5ecd0c2467fedbf3978a8a46a54dc02acd0abea6497"
 
   url "https://github.com/kiwamizamurai/washi/releases/download/v#{version}/Washi-#{version}-aarch64.zip"
   name "Washi"
