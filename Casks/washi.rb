@@ -1,15 +1,15 @@
 cask "washi" do
-  version "1.2.0"
-  sha256 "27e737a2e67ebca28c0567669b74820a7053fc64a730684fc2ab4e7cfd02b4f1"
+  version "0.1.0"
+  sha256 "21d637c43c0a531f97ec5db5ba602358a887a7c853302f2b37f6c7c367feb376"
 
   url "https://github.com/kiwamizamurai/washi/releases/download/v#{version}/Washi-#{version}-aarch64.zip"
   name "Washi"
-  desc "Viewer and editor for Markdown, Typst, LaTeX, Mermaid and PDF"
+  desc "Viewer and editor for Markdown, Typst, LaTeX and Mermaid"
   homepage "https://github.com/kiwamizamurai/washi"
 
   depends_on arch: :arm64
-  # Renders LaTeX (latexmk is used instead when it is on the PATH)
-  depends_on formula: "tectonic"
+  # pandoc converts LaTeX to HTML; tectonic draws TikZ pictures
+  depends_on formula: ["pandoc", "tectonic"]
   depends_on :macos
 
   app "Washi.app"
